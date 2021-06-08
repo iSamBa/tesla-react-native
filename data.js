@@ -1,4 +1,4 @@
-[
+export default ([
     {
         id: 1,
         image: require('./app/assets/images/ms.jpg'),
@@ -41,4 +41,4 @@
         title: "Accessories",
     },
     
-]
+])

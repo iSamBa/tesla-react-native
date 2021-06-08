@@ -1,10 +1,13 @@
 import React from 'react'
-import { ImageBackground, StyleSheet, Text, View } from 'react-native'
+import {Dimensions,  ImageBackground, StyleSheet, Text, View } from 'react-native'
 
 import defaultStyles from '../config/styles'
 import Button from './Button'
 
 const Card = ({ imageUrl, title, subtitle }) => {
+    const handlePress = () => {
+        alert('Zaama 3ndek l flous bach tchri !!! TA SIR FIHALATEK')
+    }
     return (
         <View style={styles.container}>
             <ImageBackground
@@ -19,6 +22,7 @@ const Card = ({ imageUrl, title, subtitle }) => {
                 <Button
                     backgroundColor={defaultStyles.colors.primary}
                     title="Custom order"
+                    onPress={handlePress}
                 />
                 <Button
                     backgroundColor={defaultStyles.colors.secondary}
@@ -36,7 +40,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         width: '100%',
-        height: '100%',
+        height: Dimensions.get('window').height,
     },
     buttonsContainer: {
         alignItems: 'center',
